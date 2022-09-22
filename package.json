@@ -1,16 +1,16 @@
 {
   "name": "@rbxts/boattest",
   "version": "0.1.0",
-  "main": "out/init.lua",
+  "main": "src/init.lua",
   "license": "MIT",
   "scripts": {
     "build": "rbxtsc",
     "watch": "rbxtsc -w",
     "prepublishOnly": "yarn run build"
   },
-  "types": "out/index.d.ts",
+  "types": "src/index.d.ts",
   "files": [
-    "out"
+    "src"
   ],
   "publishConfig": {
     "access": "public"
