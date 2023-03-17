@@ -3,21 +3,21 @@ type assertions = assertionMethods & { [index: string]: assertions };
 interface assertionMethods {
 	never: assertions;
 
-	exist(): void;
-	exists(): void;
+	exist(this: void): void;
+	exists(this: void): void;
 
-	equal(expectedValue: unknown): void;
-	equals(expectedValue: unknown): void;
+	equal(this: void, expectedValue: unknown): void;
+	equals(this: void, expectedValue: unknown): void;
 
-	isA(expectedType: keyof CheckableTypes): void;
+	isA(this: void, expectedType: keyof CheckableTypes): void;
 
-	fail(): void;
-	fails(): void;
-	throw(): void;
-	throws(): void;
+	fail(this: void): void;
+	fails(this: void): void;
+	throw(this: void): void;
+	throws(this: void): void;
 
-	match(pattern: string): void;
-	matches(pattern: string): void;
+	match(this: void, pattern: string): void;
+	matches(this: void, pattern: string): void;
 }
 
 declare function thisValue(options: unknown): assertions;
